@@ -1,0 +1,26 @@
+@media print, (max-width: 1187px) {
+
+    :root {
+        --font_size: 16px;
+        --font_size_title: 40px;
+    }
+
+    header .menu .item a {
+        margin-right: 13px;
+    }
+    .header_contacts-phone {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    .license_text img {
+        display: none;
+    }
+    .license_text {
+        width: 100%;
+    }
+ 
+
+
+
+
+}
