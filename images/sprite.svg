@@ -7,5 +7,24 @@
     </symbol>
 
 
+        
+    <symbol viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg" id="arrow_prev">
+       <path d="M8.5 1L1.5 8L8.5 15" stroke-width="1.5"/>
+    </symbol>
+
+
+    
+    <symbol viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg" id="arrow_next">
+        <path d="M1.5 15L8.5 8L5 4.5L1.5 1" stroke-width="1.5"/>
+        <defs>
+            <linearGradient id="paint0_linear_4027_18" x1="3.08065" y1="15" x2="10.3605" y2="13.059" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FFAD62"/>
+                <stop offset="1" stop-color="#FFC188"/>
+            </linearGradient>
+        </defs>
+    </symbol>
+
+
+
 
 </svg>

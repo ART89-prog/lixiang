@@ -19,6 +19,17 @@ $(() => {
   })
 
 
+  const beforeAfterElement = new BeforeAfter({
+    rootElement: document.querySelector("#before-after"),
+    allowSlide: false,
+    allowClick: true,
+    clickTransitionDuration: 1000,
+    defaultSliderPosition: 45,
+    topLeftText: "До",
+    topRightText: "После",
+    textClassName: "my-custom-class"
+  });
+
 
   // Фокус при клике на название поля
   $('body').on('click', 'form label', function () {
@@ -51,6 +62,11 @@ $(() => {
       watchSlidesProgress: true,
       slideActiveClass: 'active',
       slideVisibleClass: 'visible',
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
@@ -70,11 +86,7 @@ $(() => {
         480: {
           spaceBetween: 20,
           slidesPerView: 1,
-          pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true,
-          }
+      
         },
         768: {
           spaceBetween: 30,
