@@ -1,12 +1,6 @@
 $(() => {
 
 
-  //setTimeout(() => setHeight($(swiper.$el).find('.review')))
-  if ($(window).width() < 480) {
-    $(".cases_items .cases_item").addClass("active");
-    $(".cases_items .cases_item:first-child").removeClass("active");
-  }
-
   // Моб. меню
   $('header .mob_menu_btn').click((e) => {
     e.preventDefault()
@@ -45,11 +39,11 @@ $(() => {
 
 
 
-  const licenseSliders = [],
-    license = document.querySelectorAll('.license .swiper')
+  const stageSliders = [],
+  stage = document.querySelectorAll('.stage .swiper')
 
-  license.forEach(function (el, i) {
-    el.classList.add('license_s' + i)
+  stage.forEach(function (el, i) {
+    el.classList.add('stage_s' + i)
 
     let options = {
       loop: true,
@@ -92,23 +86,23 @@ $(() => {
         },
         1280: {
           spaceBetween: 30,
-          slidesPerView: 4
+          slidesPerView: 3
         }
       },
       on: {
         init: swiper => {
-          setTimeout(() => setHeight($(swiper.$el).find('license .swiper-slide')))
+          setTimeout(() => setHeight($(swiper.$el).find('stage .swiper-slide')))
         },
         resize: swiper => {
           setTimeout(() => {
-            $(swiper.$el).find('.license .swiper-slide').height('auto')
-            setHeight($(swiper.$el).find('.license .swiper-slide'))
+            $(swiper.$el).find('.stage .swiper-slide').height('auto')
+            setHeight($(swiper.$el).find('.stage .swiper-slide'))
           })
         }
       }
     }
 
-    licenseSliders.push(new Swiper('.license_s' + i, options))
+    stageSliders.push(new Swiper('.stage_s' + i, options))
   })
 
 
