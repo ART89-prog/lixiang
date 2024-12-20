@@ -197,11 +197,13 @@ $(() => {
       loop: true,
       speed: 500,
       watchSlidesProgress: true,
+      centeredSlides: true,
       slideActiveClass: 'active',
       slideVisibleClass: 'visible',
-      navigation: {
-        nextEl: '.swiper-button-next3',
-        prevEl: '.swiper-button-prev3'
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
       },
       preloadImages: false,
       lazy: {
@@ -217,12 +219,7 @@ $(() => {
         },
         480: {
           spaceBetween: 0,
-          slidesPerView: 1,
-          pagination: {
-            el: '.swiper-pagination3',
-            type: 'bullets',
-            clickable: true,
-          },
+          slidesPerView: 1
         },
         768: {
           spaceBetween: 0,
@@ -233,8 +230,8 @@ $(() => {
           slidesPerView: 1
         },
         1280: {
-          spaceBetween: -250,
-          slidesPerView: 1
+          spaceBetween: 73,
+          slidesPerView: 1.6
         }
       },
       on: {
@@ -256,72 +253,7 @@ $(() => {
 
 
 
-  const projectsSliders = [],
-    projects = document.querySelectorAll('.projects .swiper')
-
-  projects.forEach(function (el, i) {
-    el.classList.add('projects_s' + i)
-
-    let options = {
-      loop: true,
-      speed: 500,
-      watchSlidesProgress: true,
-      slideActiveClass: 'active',
-      slideVisibleClass: 'visible',
-      navigation: {
-        nextEl: '.swiper-button-next4',
-        prevEl: '.swiper-button-prev4'
-      },
-      pagination: {
-        el: '.swiper-pagination4',
-        type: 'fraction',
-      },
-      preloadImages: false,
-      lazy: {
-        enabled: true,
-        checkInView: true,
-        loadOnTransitionStart: true,
-        loadPrevNext: true
-      },
-      breakpoints: {
-        0: {
-          spaceBetween: 0,
-          slidesPerView: 1
-        },
-        480: {
-          spaceBetween: 0,
-          slidesPerView: 1
-        },
-        768: {
-          spaceBetween: 0,
-          slidesPerView: 1
-        },
-        1023: {
-          spaceBetween: 00,
-          slidesPerView: 1
-        },
-        1280: {
-          spaceBetween: 0,
-          slidesPerView: 1
-        }
-      },
-      on: {
-        init: swiper => {
-          setTimeout(() => setHeight($(swiper.$el).find('projects .swiper-slide')))
-        },
-        resize: swiper => {
-          setTimeout(() => {
-            $(swiper.$el).find('.projects .swiper-slide').height('auto')
-            setHeight($(swiper.$el).find('.projects .swiper-slide'))
-          })
-        }
-      }
-    }
-
-    projectsSliders.push(new Swiper('.projects_s' + i, options))
-  })
-
-
+ 
 
   // Аккордион
   $('body').on('click', '.accordion .accordion_item .accordion_item-head', function (e) {
