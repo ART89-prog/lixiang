@@ -59,9 +59,135 @@
     header .menu .item a {
         font-size: 28px;
     }
+    .header_top {
+        margin-bottom: 80px;
+    }
+    .header_title br {
+        display: none;
+    }
+    .header_title {
+        font-size: 38px;
+    }
+    .header_text br {
+        display: none;
+    }
+    .header_bottom form .btn_callback {
+        display: block;
+    }
+    .header_bottom {
+        margin-bottom: 60px;
+    }
+    .header_items {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-top: 30px;
+    }
+    .header_items > * {
+        width: calc(100%/2 - 25px);
+    }
+    .block, .block2 {
+        padding: 60px 0;
+    }
+    .block .block_head .title, 
+    .block2 .block_head .title {
+        font-size: 30px;
+    }
+    .block .block_head .text {
+        font-size: 18px;
+    }
+    .service_items > * {
+        width: calc(100% / 2 - 10px);
+        padding: 15px;
+    }
+    .service_item:last-child {
+        min-height: 300px;
+    }
+    .before_after-box {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .stage .swiper-slide {
+        padding: 15px;
+    }
+    .callback .cont {
+        flex-direction: column;
+    }
+    .callback .block_head .title {
+        max-width: 100%;
+        margin-top: 0px;
+    }
+    .callback .block_head {
+        width: 100%;
+    }
+    .callback_form {
+        width: 700px;
+    }
+    .advantage_item-wrap {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .advantage_item + .advantage_item {
+        margin-top: 40px;
+    }
+    .advantage_item:nth-child(2n + 1) .advantage_item-wrap {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    .advantage_item-img {
+        margin: 0 auto;
+    }
+    .advantage_item-img, .videos_item {
+        width: 630px;
+        height: 372px;
+    }
+    .benefits_items {
+        gap: 30px;
+    }
+    .benefits_items > * {
+        width: calc(100% / 2 - 15px);
+    }
+    .benefits_item-text {
+        font-size: 18px;
+    }
+    .callback .block_head .title {
+        text-align: center;
+    }
+    .callback_form-title br {
+        display: none;
+    }
+    .callback_form-title {
+        font-size: 23px;
+    }
+    .achievement_wrap {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .advantage_item-img, 
+    .videos_item {
+        margin: 0 auto;
+    }
+    .achievement_info-text {
+        font-size: 18px;
+    }
+    footer {
+        padding: 60px 0px 0px;
+    }
+    .footer_top {
+        gap: 40px;
+    }
+    .footer_top > * {
+        width: calc(100%/2 - 30px);
+    }
+    .footer_soc-wrap > * {
+        width: 50px;
+    }
 
-   
-   
+
+
+
+
+
+
     
 
     

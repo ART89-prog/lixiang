@@ -152,12 +152,12 @@ $(() => {
         },
         480: {
           spaceBetween: 20,
-          slidesPerView: 1,
+          slidesPerView: 2,
       
         },
         768: {
           spaceBetween: 20,
-          slidesPerView: 2
+          slidesPerView: 3
         },
         1023: {
           spaceBetween: 20,
@@ -290,12 +290,12 @@ $(() => {
           slidesPerView: 1
         },
         768: {
-          spaceBetween: 0,
-          slidesPerView: 1
+          spaceBetween: 20,
+          slidesPerView: 1.4
         },
         1023: {
-          spaceBetween: 0,
-          slidesPerView: 1
+          spaceBetween: 20,
+          slidesPerView: 1.5
         },
         1280: {
           spaceBetween: 73,
