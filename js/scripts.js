@@ -49,6 +49,73 @@ $(() => {
   })
 
 
+  const videoSliders = [],
+  video = document.querySelectorAll('.video .swiper')
+
+  video.forEach(function (el, i) {
+    el.classList.add('video_s' + i)
+
+    let options = {
+      loop: true,
+      speed: 500,
+      watchSlidesProgress: true,
+      slideActiveClass: 'active',
+      slideVisibleClass: 'visible',
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      preloadImages: false,
+      lazy: {
+        enabled: true,
+        checkInView: true,
+        loadOnTransitionStart: true,
+        loadPrevNext: true
+      },
+      breakpoints: {
+        0: {
+          spaceBetween: 20,
+          slidesPerView: 1
+        },
+        480: {
+          spaceBetween: 20,
+          slidesPerView: 1,
+      
+        },
+        768: {
+          spaceBetween: 20,
+          slidesPerView: 2
+        },
+        1023: {
+          spaceBetween: 20,
+          slidesPerView: 2
+        },
+        1280: {
+          spaceBetween: 20,
+          slidesPerView: 2
+        }
+      },
+      on: {
+        init: swiper => {
+          setTimeout(() => setHeight($(swiper.$el).find('.video .swiper-slide')))
+        },
+        resize: swiper => {
+          setTimeout(() => {
+            $(swiper.$el).find('.video .swiper-slide').height('auto')
+            setHeight($(swiper.$el).find('.video .swiper-slide'))
+          })
+        }
+      }
+    }
+
+    videoSliders.push(new Swiper('.video_s' + i, options))
+  })
+
 
   const stageSliders = [],
   stage = document.querySelectorAll('.stage .swiper')
@@ -103,7 +170,7 @@ $(() => {
       },
       on: {
         init: swiper => {
-          setTimeout(() => setHeight($(swiper.$el).find('stage .swiper-slide')))
+          setTimeout(() => setHeight($(swiper.$el).find('.stage .swiper-slide')))
         },
         resize: swiper => {
           setTimeout(() => {
@@ -118,75 +185,7 @@ $(() => {
   })
 
 
-  const firstSliders = [],
-    first = document.querySelectorAll('.first-section .swiper')
-
-  first.forEach(function (el, i) {
-    el.classList.add('first_s' + i)
-
-    let options = {
-      loop: true,
-      speed: 500,
-      watchSlidesProgress: true,
-      slideActiveClass: 'active',
-      slideVisibleClass: 'visible',
-      navigation: {
-        nextEl: '.swiper-button-next2',
-        prevEl: '.swiper-button-prev2'
-      },
-      pagination: {
-        el: '.swiper-pagination2',
-        type: 'bullets',
-        clickable: true,
-      },
-      preloadImages: false,
-      lazy: {
-        enabled: true,
-        checkInView: true,
-        loadOnTransitionStart: true,
-        loadPrevNext: true
-      },
-      breakpoints: {
-        0: {
-          spaceBetween: 0,
-          slidesPerView: 1
-        },
-        480: {
-          spaceBetween: 0,
-          slidesPerView: 1
-        },
-        768: {
-          spaceBetween: 0,
-          slidesPerView: 1
-        },
-        1023: {
-          spaceBetween: 0,
-          slidesPerView: 1
-        },
-        1280: {
-          spaceBetween: -160,
-          slidesPerView: 1
-        }
-      },
-      on: {
-        init: swiper => {
-          setTimeout(() => setHeight($(swiper.$el).find('.first-section .swiper-slide')))
-        },
-        resize: swiper => {
-          setTimeout(() => {
-            $(swiper.$el).find('.first-section .swiper-slide').height('auto')
-            setHeight($(swiper.$el).find('.first-section .swiper-slide'))
-          })
-        }
-      }
-    }
-
-    firstSliders.push(new Swiper('.first_s' + i, options))
-  })
-
-
-
-
+  
   const reviewsSliders = [],
     reviews = document.querySelectorAll('.reviews .swiper')
 

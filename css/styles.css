@@ -979,6 +979,27 @@ ul li + li {
 
 
 
+.video_item {
+    position: relative;
+    display: block;
+    border-radius: 12px;
+}
+.video_item:before {
+    position: absolute;
+    content: "";
+    width: 70px;
+    height: 70px;
+    background: url(../images/play.svg);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.video_item .videos_item-img img {
+    width: 100%;
+    height: auto;
+}
+
+
 
 .callback .cont {
     position: relative;
